@@ -1,0 +1,26 @@
+.test{ 
+    float: 'right';
+    margin-right: '8px';
+    background-color: blueviolet;
+}
+
+.even-columns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.even-width{
+    width: 33%;
+}
+
+.center-width{
+    width: 100%;
+    text-align: center;
+}
+
+.product-items{
+    position: relative;
+    right: 50px;
+}

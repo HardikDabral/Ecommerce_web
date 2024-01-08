@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import Auth from './components/Auth/Auth';
+import Home from './components/Home/Home';
+import store from './redux/store';
+import { Provider } from 'react-redux';
 
-function App() {
+const ProtectedRoute = ({ element }) => {
+  const authToken = localStorage.getItem('authToken');
+  
+  return authToken ? element : <Navigate to="/auth" />;
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/home" element={<ProtectedRoute element={<Home />} />} />
+            <Route path="/" element={<Navigate to="/auth" />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;

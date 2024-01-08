@@ -1,0 +1,50 @@
+.img{
+    object-fit: cover;
+    height : 200px;
+}
+
+.card-height{
+    height: 100%
+}
+
+.badge{
+    height: 21px;
+    width: 60px
+}
+
+.price{
+    font-weight: bold
+}
+
+.discount{
+    font-weight: light; 
+    color: darkgreen;
+    font-size: 11px
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0); /* Dark grey background color */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Invert the color of the arrow icon */
+  width: 26px; /* Set the desired width */
+  height: 30px; /* Set the desired height */
+  border-radius: 10%; /* Optional: Make it circular */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark grey background color */
+    padding: 10px; /* Padding around the label */
+    color: white; /* Text color */
+    font-size: 1rem; /* Set the desired font size */
+    border-radius: 5px; /* Optional: Add rounded corners */
+  }
+  
+  /* Optional: If you want to center the label horizontally */
+  .carousel-caption {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+

@@ -1,0 +1,10 @@
+.Box{
+    max-width: 400px;
+    width: 100%;
+}
+
+.icon{
+    display: flex;
+    align-items: baseline;
+    font-weight: 400;
+}
